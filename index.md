@@ -1,6 +1,7 @@
 ---
 layout: default
 title: アリウム属の無時間性
+desc: description test
 ---
 # test
 ## hello
