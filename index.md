@@ -1,3 +1,7 @@
+---
+layout: default
+title: アリウム属の無時間性
+---
 # test
 ## hello
 - my name is
