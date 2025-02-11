@@ -1,6 +1,6 @@
 ---
 layout: default
-title: アリウム属の無時間性
+title: アリウム属の構造化
 desc: description test
 ---
 # test
