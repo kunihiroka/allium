@@ -20,4 +20,9 @@ desc: description test
 - [Github Pages](./github_pages/github_pages.html)
 
 ---
-> コンテンツの構造はディレクトリ化しない。
+# 構成ルール
+- コンテンツの構造はディレクトリ化しない。
+- コンテンツはですます調とする。
+
+---
+Copyright @ 2025 Allium All Right Reserved.
