@@ -3,7 +3,7 @@ layout: default
 title: 時間を喪失するアリウム属
 desc: description test
 ---
-# test
+# 時間を喪失するアリウム属
 ## hello
 - my name is
 - kamira
