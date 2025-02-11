@@ -14,7 +14,10 @@ desc: description test
 ## Contents
 ### Book Review
 #### マネジメント
+- [001_こうして、社員は、やる気を失っていく](./book_review/001_こうして社員は、やる気を失っていく/001_こうして社員は、やる気を失っていく.md)
+
+#### サンプル
 - [Github Pages](./github_pages/github_pages.html)
 
 ---
-- コンテンツの構造はディレクトリ化しない。
+> コンテンツの構造はディレクトリ化しない。
