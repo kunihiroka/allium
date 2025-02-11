@@ -1,6 +1,6 @@
 ---
 layout: default
-title: アリウム属の構造化
+title: 時間を喪失するアリウム属
 desc: description test
 ---
 # test
