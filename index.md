@@ -12,4 +12,9 @@ desc: description test
 - [DIR_TEST1](./dir_test1/dir_test.html)
 
 ## Contents
+### Book Review
+#### マネジメント
 - [Github Pages](./github_pages/github_pages.html)
+
+---
+- コンテンツの構造はディレクトリ化しない。
