@@ -32,6 +32,7 @@ desc: description test
 # 構成ルール
 - コンテンツの構造はディレクトリ化しない。
 - コンテンツはですます調とする。
+- フィードバックはXで受ける。
 
 ---
 Copyright @ 2025 Allium All Right Reserved.
