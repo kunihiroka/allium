@@ -13,6 +13,7 @@ function applyTopPadding() {
     // Update various absolute positions to match where the main container
     // starts. This is necessary for handling multi-line nav headers, since
     // that pushes the main container down.
+<<<<<<< HEAD
     var offset = $('body > .container').offset();
     $('html').css('scroll-padding-top', offset.top + 'px');
     $('.bs-sidebar.affix').css('top', offset.top + 'px');
@@ -33,17 +34,47 @@ $(document).ready(function() {
     // make sure search input gets autofocus every time modal opens.
     $search_modal.on('shown.bs.modal', function() {
         $search_modal.find('#mkdocs-search-query').focus();
+=======
+    var container = document.querySelector('body > .container');
+    var offset = container.offsetTop;
+
+    document.documentElement.style.scrollPaddingTop = offset + 'px';
+    document.querySelectorAll('.bs-sidebar.affix').forEach(function(sidebar) {
+        sidebar.style.top = offset + 'px';
+    });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    var search_term = getSearchTerm();
+    var search_modal = new bootstrap.Modal(document.getElementById('mkdocs_search_modal'));
+    var keyboard_modal = new bootstrap.Modal(document.getElementById('mkdocs_keyboard_modal'));
+
+    if (search_term) {
+        search_modal.show();
+    }
+
+    // make sure search input gets autofocus every time modal opens.
+    document.getElementById('mkdocs_search_modal').addEventListener('shown.bs.modal', function() {
+        document.getElementById('mkdocs-search-query').focus();
+>>>>>>> a5b54644766ca9a54d012c1fde530f0591540a38
     });
 
     // Close search modal when result is selected
     // The links get added later so listen to parent
+<<<<<<< HEAD
     $('#mkdocs-search-results').click(function(e) {
         if ($(e.target).is('a')) {
             $search_modal.modal('hide');
+=======
+    document.getElementById('mkdocs-search-results').addEventListener('click', function(e) {
+        if (e.target.tagName === 'A') {
+            search_modal.hide();
+>>>>>>> a5b54644766ca9a54d012c1fde530f0591540a38
         }
     });
 
     // Populate keyboard modal with proper Keys
+<<<<<<< HEAD
     $keyboard_modal.find('.help.shortcut kbd')[0].innerHTML = keyCodes[shortcuts.help];
     $keyboard_modal.find('.prev.shortcut kbd')[0].innerHTML = keyCodes[shortcuts.previous];
     $keyboard_modal.find('.next.shortcut kbd')[0].innerHTML = keyCodes[shortcuts.next];
@@ -164,6 +195,131 @@ $('body').scrollspy({
 /* Prevent disabled links from causing a page reload */
 $("li.disabled a").click(function() {
     event.preventDefault();
+=======
+    document.querySelector('.help.shortcut kbd').innerHTML = keyCodes[shortcuts.help];
+    document.querySelector('.prev.shortcut kbd').innerHTML = keyCodes[shortcuts.previous];
+    document.querySelector('.next.shortcut kbd').innerHTML = keyCodes[shortcuts.next];
+    document.querySelector('.search.shortcut kbd').innerHTML = keyCodes[shortcuts.search];
+
+    // Keyboard navigation
+    document.addEventListener("keydown", function(e) {
+      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return true;
+      var key = e.which || e.keyCode || window.event && window.event.keyCode;
+      var page;
+      switch (key) {
+          case shortcuts.next:
+              page = document.querySelector('.navbar a[rel="next"]');
+              break;
+          case shortcuts.previous:
+              page = document.querySelector('.navbar a[rel="prev"]');
+              break;
+          case shortcuts.search:
+              e.preventDefault();
+              keyboard_modal.hide();
+              search_modal.show();
+              document.getElementById('mkdocs-search-query').focus();
+              break;
+          case shortcuts.help:
+              search_modal.hide();
+              keyboard_modal.show();
+              break;
+          default: break;
+      }
+      if (page && page.hasAttribute('href')) {
+          keyboard_modal.hide();
+          window.location.href = page.getAttribute('href');
+      }
+    });
+
+    document.querySelectorAll('table').forEach(function(table) {
+      table.classList.add('table', 'table-striped', 'table-hover');
+    });
+
+    function showInnerDropdown(item) {
+      var popup = item.nextElementSibling;
+      popup.classList.add('show');
+      item.classList.add('open');
+
+      // First, close any sibling dropdowns.
+      var container = item.parentElement.parentElement;
+      container.querySelectorAll(':scope > .dropdown-submenu > a').forEach(function(el) {
+          if (el !== item) {
+              hideInnerDropdown(el);
+          }
+      });
+
+      var popupMargin = 10;
+      var maxBottom = window.innerHeight - popupMargin;
+      var bounds = item.getBoundingClientRect();
+
+      popup.style.left = bounds.right + 'px';
+      if (bounds.top + popup.clientHeight > maxBottom &&
+          bounds.top > window.innerHeight / 2) {
+          popup.style.top = (bounds.bottom - popup.clientHeight) + 'px';
+          popup.style.maxHeight = (bounds.bottom - popupMargin) + 'px';
+      } else {
+          popup.style.top = bounds.top + 'px';
+          popup.style.maxHeight = (maxBottom - bounds.top) + 'px';
+      }
+    }
+
+    function hideInnerDropdown(item) {
+        var popup = item.nextElementSibling;
+        popup.classList.remove('show');
+        item.classList.remove('open');
+
+        popup.scrollTop = 0;
+        var menu = popup.querySelector('.dropdown-menu');
+        if (menu) {
+            menu.scrollTop = 0;
+        }
+        var dropdown = popup.querySelector('.dropdown-submenu > a');
+        if (dropdown) {
+            dropdown.classList.remove('open');
+        }
+    }
+
+    document.querySelectorAll('.dropdown-submenu > a').forEach(function(item) {
+        item.addEventListener('click', function(e) {
+            if (item.nextElementSibling.classList.contains('show')) {
+                hideInnerDropdown(item);
+            } else {
+                showInnerDropdown(item);
+            }
+
+            e.stopPropagation();
+            e.preventDefault();
+        });
+    });
+
+    document.querySelectorAll('.dropdown-menu').forEach(function(menu) {
+        menu.parentElement.addEventListener('hide.bs.dropdown', function() {
+            menu.scrollTop = 0;
+            var dropdown = menu.querySelector('.dropdown-submenu > a');
+            if (dropdown) {
+                dropdown.classList.remove('open');
+            }
+            menu.querySelectorAll('.dropdown-menu .dropdown-menu').forEach(function(submenu) {
+                submenu.classList.remove('show');
+            });
+        });
+    });
+
+    applyTopPadding();
+});
+
+window.addEventListener('resize', applyTopPadding);
+
+var scrollSpy = new bootstrap.ScrollSpy(document.body, {
+    target: '.bs-sidebar'
+});
+
+/* Prevent disabled links from causing a page reload */
+document.querySelectorAll("li.disabled a").forEach(function(item) {
+    item.addEventListener("click", function(event) {
+        event.preventDefault();
+    });
+>>>>>>> a5b54644766ca9a54d012c1fde530f0591540a38
 });
 
 // See https://www.cambiaresearch.com/articles/15/javascript-char-codes-key-codes
