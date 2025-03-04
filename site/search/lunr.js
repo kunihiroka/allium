@@ -1,10 +1,6 @@
 /**
  * lunr - http://lunrjs.com - A bit like Solr, but much smaller and not as bright - 2.3.9
-<<<<<<< HEAD
- * Copyright (C) 2022 Oliver Nightingale
-=======
  * Copyright (C) 2020 Oliver Nightingale
->>>>>>> a5b54644766ca9a54d012c1fde530f0591540a38
  * @license MIT
  */
 
@@ -61,11 +57,7 @@ var lunr = function (config) {
 lunr.version = "2.3.9"
 /*!
  * lunr.utils
-<<<<<<< HEAD
- * Copyright (C) 2022 Oliver Nightingale
-=======
  * Copyright (C) 2020 Oliver Nightingale
->>>>>>> a5b54644766ca9a54d012c1fde530f0591540a38
  */
 
 /**
@@ -185,11 +177,7 @@ lunr.FieldRef.prototype.toString = function () {
 }
 /*!
  * lunr.Set
-<<<<<<< HEAD
- * Copyright (C) 2022 Oliver Nightingale
-=======
  * Copyright (C) 2020 Oliver Nightingale
->>>>>>> a5b54644766ca9a54d012c1fde530f0591540a38
  */
 
 /**
@@ -401,11 +389,7 @@ lunr.Token.prototype.clone = function (fn) {
 }
 /*!
  * lunr.tokenizer
-<<<<<<< HEAD
- * Copyright (C) 2022 Oliver Nightingale
-=======
  * Copyright (C) 2020 Oliver Nightingale
->>>>>>> a5b54644766ca9a54d012c1fde530f0591540a38
  */
 
 /**
@@ -481,11 +465,7 @@ lunr.tokenizer = function (obj, metadata) {
 lunr.tokenizer.separator = /[\s\-]+/
 /*!
  * lunr.Pipeline
-<<<<<<< HEAD
- * Copyright (C) 2022 Oliver Nightingale
-=======
  * Copyright (C) 2020 Oliver Nightingale
->>>>>>> a5b54644766ca9a54d012c1fde530f0591540a38
  */
 
 /**
@@ -752,11 +732,7 @@ lunr.Pipeline.prototype.toJSON = function () {
 }
 /*!
  * lunr.Vector
-<<<<<<< HEAD
- * Copyright (C) 2022 Oliver Nightingale
-=======
  * Copyright (C) 2020 Oliver Nightingale
->>>>>>> a5b54644766ca9a54d012c1fde530f0591540a38
  */
 
 /**
@@ -953,11 +929,7 @@ lunr.Vector.prototype.toJSON = function () {
 /* eslint-disable */
 /*!
  * lunr.stemmer
-<<<<<<< HEAD
- * Copyright (C) 2022 Oliver Nightingale
-=======
  * Copyright (C) 2020 Oliver Nightingale
->>>>>>> a5b54644766ca9a54d012c1fde530f0591540a38
  * Includes code from - http://tartarus.org/~martin/PorterStemmer/js.txt
  */
 
@@ -1179,11 +1151,7 @@ lunr.stemmer = (function(){
 lunr.Pipeline.registerFunction(lunr.stemmer, 'stemmer')
 /*!
  * lunr.stopWordFilter
-<<<<<<< HEAD
- * Copyright (C) 2022 Oliver Nightingale
-=======
  * Copyright (C) 2020 Oliver Nightingale
->>>>>>> a5b54644766ca9a54d012c1fde530f0591540a38
  */
 
 /**
@@ -1348,11 +1316,7 @@ lunr.stopWordFilter = lunr.generateStopWordFilter([
 lunr.Pipeline.registerFunction(lunr.stopWordFilter, 'stopWordFilter')
 /*!
  * lunr.trimmer
-<<<<<<< HEAD
- * Copyright (C) 2022 Oliver Nightingale
-=======
  * Copyright (C) 2020 Oliver Nightingale
->>>>>>> a5b54644766ca9a54d012c1fde530f0591540a38
  */
 
 /**
@@ -1379,11 +1343,7 @@ lunr.trimmer = function (token) {
 lunr.Pipeline.registerFunction(lunr.trimmer, 'trimmer')
 /*!
  * lunr.TokenSet
-<<<<<<< HEAD
- * Copyright (C) 2022 Oliver Nightingale
-=======
  * Copyright (C) 2020 Oliver Nightingale
->>>>>>> a5b54644766ca9a54d012c1fde530f0591540a38
  */
 
 /**
@@ -1867,11 +1827,7 @@ lunr.TokenSet.Builder.prototype.minimize = function (downTo) {
 }
 /*!
  * lunr.Index
-<<<<<<< HEAD
- * Copyright (C) 2022 Oliver Nightingale
-=======
  * Copyright (C) 2020 Oliver Nightingale
->>>>>>> a5b54644766ca9a54d012c1fde530f0591540a38
  */
 
 /**
@@ -2363,11 +2319,7 @@ lunr.Index.load = function (serializedIndex) {
 }
 /*!
  * lunr.Builder
-<<<<<<< HEAD
- * Copyright (C) 2022 Oliver Nightingale
-=======
  * Copyright (C) 2020 Oliver Nightingale
->>>>>>> a5b54644766ca9a54d012c1fde530f0591540a38
  */
 
 /**
@@ -3504,11 +3456,7 @@ lunr.QueryParser.parseBoost = function (parser) {
     } else if (typeof exports === 'object') {
       /**
        * Node. Does not work with strict CommonJS, but
-<<<<<<< HEAD
-       * only CommonJS-like enviroments that support module.exports,
-=======
        * only CommonJS-like environments that support module.exports,
->>>>>>> a5b54644766ca9a54d012c1fde530f0591540a38
        * like Node.
        */
       module.exports = factory()
