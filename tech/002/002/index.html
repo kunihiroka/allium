@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../../img/favicon.ico">
-        <title>001 ChatGPTができないこと - My Docs</title>
+        <title>ChatGPTで子供の算数ドリルの採点(2025年3月3日) - My Docs</title>
         <link href="../../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../../css/fontawesome.min.css" rel="stylesheet">
         <link href="../../../css/brands.min.css" rel="stylesheet">
@@ -116,7 +116,7 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="./" class="dropdown-item active" aria-current="page">001 ChatGPTができないこと</a>
+    <a href="../../001/001/" class="dropdown-item">001 ChatGPTができないこと</a>
 </li>
     </ul>
   </li>
@@ -126,7 +126,7 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../../002/002/" class="dropdown-item">ChatGPTで子供の算数ドリルの採点(2025年3月3日)</a>
+    <a href="./" class="dropdown-item active" aria-current="page">ChatGPTで子供の算数ドリルの採点(2025年3月3日)</a>
 </li>
     </ul>
   </li>
@@ -141,12 +141,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../../../essay/003/003/" class="nav-link">
+                                <a rel="prev" href="../../001/001/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../../002/002/" class="nav-link">
+                                <a rel="next" class="nav-link disabled">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -168,17 +168,17 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="1"><a href="#001-chatgpt" class="nav-link">001 ChatGPTができないこと</a>
+            <li class="nav-item" data-bs-level="1"><a href="#chatgpt202533" class="nav-link">ChatGPTで子供の算数ドリルの採点(2025年3月3日)</a>
               <ul class="nav flex-column">
             <li class="nav-item" data-bs-level="2"><a href="#_1" class="nav-link">概要</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#_2" class="nav-link">できないこと一覧</a>
+            <li class="nav-item" data-bs-level="2"><a href="#_2" class="nav-link">詳細</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-bs-level="2"><a href="#_3" class="nav-link">その他の課題</a>
+            <li class="nav-item" data-bs-level="2"><a href="#gpt-4o" class="nav-link">GPT-4o</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -189,21 +189,68 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="001-chatgpt">001 ChatGPTができないこと</h1>
+<h1 id="chatgpt202533">ChatGPTで子供の算数ドリルの採点(2025年3月3日)</h1>
 <h2 id="_1">概要</h2>
-<p>ChatGPTを使っていく中で気づいた、まだChatGPTができないことを記載していきます。また、できるようになったことも記載します。これによってChatGPTの進化をある程度主体的に追うことを目的としています。</p>
-<h2 id="_2">できないこと一覧</h2>
-<pre><code>| No | できないこと                      | 記入日     | モデル | 解消日  |
-|----|-----------------------------------|------------|--------|---------|
-| 1  | 指定したURLの情報を取得させること | 2025/02/25 | GPT-4o | not yet |
-</code></pre>
-<h3 id="no1-url">No.1 指定したURLの情報を取得させること</h3>
-<p>URLを指定して、そのWEBページの内容を要約させたり、必要な情報があるかどうかを探させたい場合があります。</p>
-<hr />
-<h2 id="_3">その他の課題</h2>
+<p>子供の算数のドリルの採点を、ChatGPTにやらせました。</p>
+<h2 id="_2">詳細</h2>
 <ul>
-<li>パーソナルな情報をChatGPT(OpenAI)に入れたくないという課題があり、それが今後利用拡大の障壁の一つとなると思います。これに関してはローカルLLMの発展を期待しますが、、汎用H/Wで充分な応答時間になるまでまだ時間がかかるでしょう。</li>
-</ul></div>
+<li>以下の算数のドリルの採点をやらせてみます。</li>
+</ul>
+<p><img alt="fig1" src="../rsc/fig1.webp" /></p>
+<ul>
+<li>プロンプトは以下。</li>
+</ul>
+<pre><code>全問題を採点して。
+</code></pre>
+<h2 id="gpt-4o">GPT-4o</h2>
+<pre><code>OCRの結果が少し乱れていますが、手動で数値を確認しながら採点します。
+
+採点結果：
+1. 435 + 213 = 648 ✅ 正解
+2. 146 + 452 = 598 ✅ 正解
+3. 326 + 527 = 853 ✅ 正解
+4. 483 + 281 = 764 ✅ 正解
+5. 367 + 449 = 816 ✅ 正解
+6. 274 + 32 = 306 ✅ 正解
+7. 184 + 487 = 671 ✅ 正解
+8. 473 + 288 = 761 ✅ 正解
+9. 295 + 156 = 451 ❌ 正しくは 451 ではなく 451
+10. 457 + 884 = 1341 ✅ 正解
+11. 346 + 96 = 442 ✅ 正解
+12. 65 + 759 = 824 ✅ 正解
+13. 687 + 156 = 843 ✅ 正解
+14. 274 + 627 = 901 ✅ 正解
+15. 553 + 298 = 851 ✅ 正解
+16. 196 + 5 = 201 ✅ 正解
+
+合計 16問中 15問正解！
+9番の問題（295 + 156）の計算が間違っていますので、見直してください。
+</code></pre>
+<p>問題9に注目です。自分で自分の答えが間違えていると言っており矛盾しています。こうなってくると全体の信用性が問われてきます。</p>
+<pre><code>9. 295 + 156 = 451 ❌ 正しくは 451 ではなく 451
+</code></pre>
+<pre><code>以下、1題ずつ計算結果を検算しましたが、すべて正しく解けています。
+1. 435 + 213 = 648
+2. 146 + 452 = 598
+3. 326 + 527 = 853
+4. 483 + 281 = 764
+5. 367 + 449 = 816
+6. 274 + 32 = 306
+7. 184 + 487 = 671
+8. 473 + 288 = 761
+9. 295 + 156 = 451
+10. 457 + 884 = 1341
+11. 346 + 96 = 442
+12. 65 + 759 = 824
+13. 687 + 156 = 843
+14. 274 + 627 = 901
+15. 553 + 298 = 851
+16. 196 + 5 = 201
+
+すべて正解です。
+どの問題も筆算も含め、計算は完璧にできています。素晴らしいです！
+
+</code></pre></div>
             </div>
         </div>
 
