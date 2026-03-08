@@ -18,6 +18,7 @@ desc: description test
 
 ### ファイル
 - [induction_motor_parameter_measurement_plan_v7.pptx](./files/induction_motor_parameter_measurement_plan_v7.pptx)
+- [図解誘導電動機-基礎から制御まで 坪島 茂彦](./files/図解誘導電動機-基礎から制御まで 坪島 茂彦 199p_4501010401.pdf)
 
 ### 散文
 - [人間のAIによる代替について](./essay/001/001.md)
